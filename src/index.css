@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "PingFang TC", "Microsoft JhengHei", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-hospital-50: #f0fdfa;
+  --color-hospital-100: #ccfbf1;
+  --color-hospital-200: #99f6e4;
+  --color-hospital-500: #14b8a6;
+  --color-hospital-600: #0d9488;
+  --color-hospital-700: #0f766e;
+  --color-hospital-800: #115e59;
+  --color-hospital-900: #134e4a;
+}
+
+body {
+  background-color: #f8fafc;
+  font-family: var(--font-sans);
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
