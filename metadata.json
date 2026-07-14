@@ -1,0 +1,6 @@
+{
+  "name": "光田醫院內部飲料訂購系統",
+  "description": "光田綜合醫院內部的飲料點餐系統，包含同仁前端自選客製化規格與科室點單、管理後台即時接單、杯數合併統整與統計分析。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
