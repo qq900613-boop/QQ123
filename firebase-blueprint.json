@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "Drink": {
+      "title": "Drink Item",
+      "description": "A drink menu item",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "price": { "type": "number" },
+        "category": { "type": "string" },
+        "available": { "type": "boolean" },
+        "description": { "type": "string" },
+        "image": { "type": "string" }
+      },
+      "required": ["name", "price", "category", "available"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "A drink order placed by hospital staff",
+      "type": "object",
+      "properties": {
+        "orderNo": { "type": "string" },
+        "department": { "type": "string" },
+        "userName": { "type": "string" },
+        "items": { "type": "array" },
+        "totalPrice": { "type": "number" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["orderNo", "department", "userName", "items", "totalPrice", "status", "createdAt"]
+    },
+    "AdminSettings": {
+      "title": "Admin Settings",
+      "description": "Configuration settings for the admin panel",
+      "type": "object",
+      "properties": {
+        "passwordHash": { "type": "string" },
+        "isSetup": { "type": "boolean" }
+      },
+      "required": ["passwordHash", "isSetup"]
+    }
+  },
+  "firestore": {
+    "/drinks/{drinkId}": {
+      "schema": "Drink",
+      "description": "The collection of available drinks on the menu"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "The collection of hospital employee drink orders"
+    },
+    "/adminSettings/{settingId}": {
+      "schema": "AdminSettings",
+      "description": "Global admin settings including system password"
+    }
+  }
+}
